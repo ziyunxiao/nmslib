@@ -10,7 +10,7 @@ import time
 import math 
 
 from sklearn.neighbors import NearestNeighbors
-from sklearn.datasets.samples_generator import make_blobs
+from sklearn.datasets import make_blobs
 
 def testHnswRecallL2(dataMatrix, queryMatrix, k, M=30, efC=200, efS=1000, numThreads=4):
   queryQty = queryMatrix.shape[0]
@@ -88,4 +88,4 @@ def testRandomClustered(dataQty, centerQty, queryQty, efS, dim, k):
 testRandomClustered(100_000, centerQty=20, queryQty=1000, dim=100, k=10, efS=200)
 testRandomUnif(100_000, 1000, dim=100, k=10, efS=200)
   
-  
+
